@@ -1,0 +1,112 @@
+html,
+body,
+p,
+ul,
+ol,
+img {
+  margin: 0;
+  padding: 0;
+  border: none;
+  user-select: none;
+}
+
+.app-w-100 {
+  width: 100% !important;
+}
+
+::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.app-form-dialog {
+  .t-dialog {
+    padding: 0;
+  }
+  .t-dialog__body {
+    padding: 20px 20px 30px;
+    max-height: 68vh;
+  }
+  .t-dialog__header-content {
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    justify-content: space-between;
+    align-items: center !important;
+    background-color: var(--td-bg-color-container);
+    border-bottom: 1px solid var(--td-component-border);
+    svg {
+      margin: 0 !important;
+    }
+  }
+  .t-dialog__footer {
+    border-top: 1px solid var(--td-component-border);
+    padding: 16px 20px;
+  }
+}
+
+.app-desktop-operate {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 8;
+  width: 100%;
+  background: #fff !important;
+  height: 32px !important;
+  &-logo {
+    display: flex;
+    align-items: center;
+    .t-avatar {
+      width: 22px;
+      height: 22px;
+      margin-left: 5px;
+      border: none;
+      background: #fff;
+    }
+    h1 {
+      font-size: 15px;
+      margin: 0;
+      padding: 0;
+      color: #616161;
+      font-weight: normal;
+      margin-left: 8px;
+    }
+  }
+  .t-head-menu__inner {
+    height: 100% !important;
+    .t-menu {
+      -webkit-app-region: drag;
+      margin-left: 0 !important;
+    }
+  }
+  .t-menu__operations {
+    height: 100% !important;
+    margin-right: 0 !important;
+  }
+  &-menu {
+    height: 100% !important;
+    line-height: 30px !important;
+    .t-button {
+      -webkit-app-region: no-drag;
+      -webkit-user-select: none !important;
+      user-select: none !important;
+      border: none !important;
+      color: #616161;
+      border-radius: 0 !important;
+      height: 32px !important;
+      --ripple-color: #d3cfcf !important;
+      &:hover {
+        color: #2c2c2c;
+        background-color: #e5e5e5;
+        border-color: transparent;
+      }
+    }
+    .t-button:last-child {
+      --ripple-color: #cc0f1f !important;
+      &:hover {
+        color: #e5e5e5;
+        background-color: #e81123;
+      }
+    }
+  }
+}

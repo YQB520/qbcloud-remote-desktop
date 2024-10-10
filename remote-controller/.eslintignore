@@ -1,0 +1,11 @@
+# eslint 检测忽略文件
+dist
+node_modules
+public
+.husky
+.vscode
+.idea
+*.sh
+*.md
+
+src/assets

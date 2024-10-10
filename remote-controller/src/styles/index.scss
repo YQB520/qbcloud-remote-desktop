@@ -1,0 +1,130 @@
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+}
+html,
+body,
+ul,
+ol,
+li,
+p,
+img,
+h1,
+h3,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  background: var(--td-bg-color-page) !important;
+}
+
+.app-w-100 {
+  width: 100% !important;
+}
+
+.app-w-fixed {
+  width: 192px;
+}
+
+.app-flex-grow {
+  flex-grow: 1;
+}
+
+.app-operate-popover {
+  padding: 0 !important;
+  .app-border {
+    border-top: 1px solid var(--el-border-color);
+  }
+  &-button {
+    margin: 0.6rem;
+    box-sizing: border-box;
+    .el-button {
+      width: 100%;
+      justify-content: left;
+    }
+  }
+}
+
+.app-page {
+  box-sizing: border-box;
+  &-operate {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid var(--el-border-color);
+    align-items: center;
+    box-sizing: border-box;
+    &-title {
+      font-weight: 700;
+    }
+  }
+  &-search {
+    border-bottom: 1px solid var(--el-border-color);
+    padding: 1rem 1rem 0;
+    box-sizing: border-box;
+  }
+  &-table {
+    padding: 0 0 1.2rem;
+    box-sizing: border-box;
+  }
+  .el-pagination {
+    margin: 2rem 1rem 0;
+  }
+  &-content {
+    padding: 1.2rem 1rem;
+    box-sizing: border-box;
+  }
+}
+
+.app-login {
+  label {
+    display: none;
+  }
+}
+
+.app-form-dialog {
+  .el-dialog {
+    padding: 0;
+  }
+  .el-dialog__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--el-border-color);
+    padding: var(--el-dialog-padding-primary);
+  }
+  &-main {
+    padding: var(--el-dialog-padding-primary);
+  }
+  &-footer {
+    border-top: 1px solid var(--el-border-color);
+    padding: var(--el-dialog-padding-primary);
+  }
+}
+
+.t-menu__operations {
+  .t-button {
+    margin-left: 8px;
+  }
+}
+.app-desktop-operate-menu {
+  .t-button {
+    color: #fff;
+    &:hover {
+      background-color: #4b4b4b;
+      border-color: transparent;
+      --ripple-color: #383838;
+    }
+  }
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: var(--td-brand-color);
+}

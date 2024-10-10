@@ -1,0 +1,51 @@
+appId: com.sheniu.remote.desktop.app
+productName: 社牛远程桌面
+copyright: Copyright @ 2024 SN.Inc.
+directories:
+  buildResources: build
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
+  - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
+asarUnpack:
+  - resources/**
+win:
+  artifactName: ${productName}-${platform}-${arch}-${version}-setup.${ext}
+  icon: ./resources/logo.ico
+nsis:
+  oneClick: false
+  perMachine: false
+  installerIcon: ./resources/logo.ico
+  uninstallerIcon: ./resources/logo.ico
+  installerHeaderIcon: ./resources/logo.ico
+  deleteAppDataOnUninstall: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  runAfterFinish: false
+  shortcutName: ${productName}
+  uninstallDisplayName: ${productName}
+mac:
+  entitlementsInherit: build/entitlements.mac.plist
+  extendInfo:
+    - NSCameraUsageDescription: Application requests access to the device's camera.
+    - NSMicrophoneUsageDescription: Application requests access to the device's microphone.
+    - NSDocumentsFolderUsageDescription: Application requests access to the user's Documents folder.
+    - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
+  notarize: false
+dmg:
+  artifactName: ${name}-${version}.${ext}
+linux:
+  target:
+    - AppImage
+    - snap
+    - deb
+  maintainer: electronjs.org
+  category: Utility
+appImage:
+  artifactName: ${name}-${version}.${ext}
+npmRebuild: false
+publish:
+  provider: generic
+  url: https://x.xxx.com/auto-updates

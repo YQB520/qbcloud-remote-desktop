@@ -1,0 +1,13 @@
+/remote-controller/node_modules
+/remote-controller/.vscode
+/remote-desktop/node_modules
+/remote-desktop/.vscode
+/remote-desktop/dist
+/remote-desktop/out
+/remote-server/vendor
+/remote-server/public/hot
+/remote-server/public/storage
+/remote-server/storage/*.key
+/remote-server/.env
+/remote-server/.idea
+
